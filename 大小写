@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	char upper,lower;
+	printf("小写字母：");
+	lower=getchar();
+	upper=lower-32;
+	putchar(upper); 
+	return  0;
+}
