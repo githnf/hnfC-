@@ -1,0 +1,12 @@
+#include <stdio.h>
+int main(){
+	char x,z;
+	int y;
+	printf("明文：\n");
+	scanf("%c",&x);
+	printf("秘钥；\n");
+	scanf("%d",&y);
+	z=(x+y-'a')%26+'a';
+	putchar(z);
+	return 0;
+}
