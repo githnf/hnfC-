@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+#define Log(x,y)  (log(x)/log(y))
+int main()
+{
+	double x,y,z;
+	printf("底数：");
+	scanf("%lg",&y);
+	printf("真数：");
+	scanf("%lg",&x); 
+	z=Log(x,y);
+	printf("%.12f\n",z);
+	return 0;
+}
+ 
