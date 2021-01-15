@@ -1,0 +1,14 @@
+#include<stdio.h>
+void p(int,int);
+int main() {
+	int n,m;
+	scanf("%d%d",&m,&n);
+	p(m,n);
+	return 0;
+}
+void p(int m,int n) {
+	if(m<=n) {
+		printf("%d\n",m);
+		p(m+1,n);
+	}
+}
