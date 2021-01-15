@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<math.h> 
+double p(double,int);
+int main()
+{
+	int n;
+	double x,z;
+	printf("x的值："); 
+	scanf("%lg",&x);
+	printf("n的值:");
+	scanf("%d",&n);
+	z=p(x,n);
+	printf("%lf",z);
+	return 0;
+}
+double p(double x,int n)
+{
+	double z;
+	if(n==0)
+	{
+		z=1;
+	}
+	else
+	{
+		z=pow(x,n)+p(x,n-1);
+	}
+	return z;
+}
