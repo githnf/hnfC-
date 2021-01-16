@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<ctype.h>
+void Encrypt();
+void Decrypt();
+char Encode(char);
+char Decode(char);
+int main() {
+	char choice;
+	printf("E or D\n");
+	scanf("%c%*c",&choice);
+	switch(choice)
+	{
+		case 'E':
+			printf("加密\n");
+			Encrypt();
+			break;
+		case 'D':
+			printf("解密\n");
+			Decrypt();
+		default:
+			printf("请选择正确的选项");
+	}
+	return 0;
+}
+//加密过程
+void Encrypt()
+{
+	char m;
+	m=getchar();
+	if(m!='\n')
+	{
+		Encrypt();
+	}
+	putchar(Encode(m));
+}
+//数字转字母 
+char Encode(char x)
+{
+	char y='\0';
+	if(isdigit(x))
+	{
+		y=x-'0'+'A';
+	}
+	else
+	{
+		y=x;
+	 } 
+	return y;
+}
+//解密过程
+void Decrypt()
+{
+	char x,z;
+	x=getchar();
+	if(x!='\n')
+	{
+		Decrypt();
+	} 
+	 putchar(Decode(x));
+ } 
+// 字母转数字 
+ char Decode(char x)
+ {
+ 	char y='\0';
+ 	if(isupper(x))
+ 	{
+ 		y=x-'A'+'0';
+	 }
+	 else
+	 {
+	 	y=x;
+	 }
+	 return y;
+ }
