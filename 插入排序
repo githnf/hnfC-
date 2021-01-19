@@ -1,0 +1,37 @@
+#include<stdio.h>
+void Insert(double*,int);
+int main()
+{
+	int a,b;
+	double array[]={1.0,3.0,4.5,9.6,6.6,3.3,2.4,5.8};
+	b=8;
+//	sizeof(array)/sizeof(array[0]);
+	Insert(array,b);
+	for(a=0;a<b;++a)
+	{
+		printf("%lf\n",array[a]);
+	}
+	return 0;
+}     
+void Insert(double*array,int side)
+{
+	int i,j;
+	double x;
+	for(i=1;i<side;++i)
+	{
+		x=array[i];
+		for(j=i-1;j>=1;j--)
+		{
+		
+			if(array[j]>array[i])
+			{
+				array[j+1]=array[j];
+			}
+			else
+			{
+				break;
+			}
+		}
+	array[j+1]=x;	
+	}
+}
